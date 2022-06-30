@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import './App.css'
+
+
+
+
+/* Componentes */ 
+
+import HelloWorldOne from "./components/HelloWorldOne";
+import HelloWorldTwo from "./components/HelloWorldTwo";
+import HelloWorldThree from "./components/HelloWorldThree";
+import HelloWorldFour from "./components/HelloWorldFour";
+import HelloWorldSix from "./components/HelloWorldSix";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <HelloWorldOne />
+        <HelloWorldTwo />
+        <HelloWorldThree title="Ola Mundo" subtitle="Props"/>
+        <HelloWorldFour title="Ola Mundo">
+            <p>Componente usando Props Children</p>
+        </HelloWorldFour>
+        <HelloWorldSix />
     </div>
   );
 }
